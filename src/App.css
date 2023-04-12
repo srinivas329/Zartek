@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.bg-container {
+  background-image: linear-gradient(to bottom, #341823, #f53784);
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  margin: 0px;
+  color: #3638f5;
+  font-family: roboto;
+}
+.card1 {
+  text-align: center;
+}
+.shop-name {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 60px;
+  color: #cdfa05;
+}
+.click-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 30px;
+}
+.main-img {
+  width: 600px;
+  border-radius: 30px;
+  height: 300px;
+}
