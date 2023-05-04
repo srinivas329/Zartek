@@ -4,7 +4,7 @@ import {BiFoodTag} from 'react-icons/bi'
 import './index.css'
 
 const Barnyard = props => {
-  const {details, addToCart, removeFromCart} = props
+  const {details, addToCart, styling, removeFromCart} = props
   const [count, setCount] = useState(0)
   const Increase = () => {
     setCount(prev => prev + 1)

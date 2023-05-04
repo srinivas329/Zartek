@@ -7,6 +7,13 @@ body {
   padding: 20px;
   overflow-x: hidden;
 }
+.activeCategory {
+  color: red;
+  border: 2px solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
 nav {
   height: 2rem;
   width: 100%;

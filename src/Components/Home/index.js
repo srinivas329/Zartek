@@ -24,7 +24,9 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState(tableMenu[0]?.menu_category)
   const [cartItems, setCartItems] = useState([])
   const addToCart = item => {
-    setCartItems([...cartItems, item])
+    if (cartItems.includes(item) === false) {
+      setCartItems([...cartItems, item])
+    }
   }
 
   const removeFromCart = () => {
@@ -47,7 +49,6 @@ const Home = () => {
     const url = 'https://run.mocky.io/v3/a67edc87-49c7-4822-9cb4-e2ef94cb3099'
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
     setFoodData(data[0])
     setTableMenu(data[0].table_menu_list)
   }
@@ -97,9 +98,9 @@ const Home = () => {
           {tableMenu.map(each => (
             <li
               onClick={() => setActiveTab(each?.menu_category)}
-              className="active"
+              className={activeTab === each.menu_category && 'activeCategory'}
             >
-              {each?.menu_category}
+              {each.menu_category}
             </li>
           ))}
         </ul>
@@ -125,6 +126,7 @@ const Home = () => {
         {activeTab === 'From The Barnyard' && barnyard?.length > 0
           ? barnyard?.map(each => (
               <Barnyard
+                styling="activeCategory"
                 details={each}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
